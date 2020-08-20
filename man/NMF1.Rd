@@ -12,7 +12,9 @@ NMF1(X, p.seed = 123)
 \item{p.seed}{A random seed for model fitting.}
 }
 \value{
-lvs The resulting LVSs for the new set Y.
+It returns a list of following components:
+\item{weights}{The NMF1 weights for input features.}
+\item{scores}{The resulting NMF1 scores for the whole set.}
 }
 \description{
 Computes NMF1 scores with factor loadings constrained to be non-negative.

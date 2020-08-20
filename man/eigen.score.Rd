@@ -12,9 +12,9 @@ eigen.score(X, training)
 \item{training}{A logical or index vector to indicate whether the subject belongs to the training set.}
 }
 \value{
-weights The Eigen weights for input features.
-
-scores The resulting Eigen scores for the whole set.
+It returns a list of following components:
+\item{weights}{The Eigen weights for input features.}
+\item{scores}{The resulting Eigen scores for the whole set.}
 }
 \description{
 Compute Eigen weights and scores. This method is unsupervised, and assigns weights that are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input feature.

@@ -14,13 +14,11 @@ LPC(X, group, training)
 \item{training}{A logical or index vector to indicate whether the subject belongs to the training set.}
 }
 \value{
-lpc.n The number of significant PCs (eigenvalues) suggested by Tracy-Widom test, a vector of the sign of individual PC.
-
-pc.sign A vector of the sign of individual PC.
-
-weights The LPC weights for input features.
-
-scores The resulting LPC scores for the whole set.
+It returns a list of following components:
+\item{lpc.n}{The number of significant PCs (eigenvalues) suggested by Tracy-Widom test, a vector of the sign of individual PC.}
+\item{pc.sign}{A vector of the sign of individual PC.}
+\item{weights}{The LPC weights for input features.}
+\item{scores}{The resulting LPC scores for the whole set.}
 }
 \description{
 Computes LPC weights and scores based on an almost unsupervised method that combines multiple PCs and only requires weak labels to help select the signs of individual PCs.

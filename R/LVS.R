@@ -9,7 +9,7 @@ LVS.fit <- function(X,starting.choice="random",p.seed=3080) {
   return(fit.VA)
 }
 
-#' @title Latent Variable Score (LVS)
+#' @title Latent Variable Score
 #' @description Computes Latent Variable Scores based on an unsupervised multivariate mixed model framework for multivariate bernoulli data that assumes one latent variable.
 #' @param X A training data set. It should be a matrix of binary numbers.
 #' @param Y A new data set. It should be a matrix of binary numbers. Default is NULL, then X will be used in prediction.

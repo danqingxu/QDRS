@@ -14,9 +14,9 @@ PheRS(X, feature.prevalence = NULL, group = NULL)
 \item{group}{A vector that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed. The default is NULL, meaning all observations will be used in prevalence computation if the feature prevalence vector is not provided by the user. Otherwise, only the controls will be used.}
 }
 \value{
-weights The PheRS weights for input features.
-
-scores The resulting PheRSs for the whole set.
+It returns a list of following components:
+\item{weights}{The PheRS weights for input features.}
+\item{scores}{The resulting PheRSs for the whole set.}
 }
 \description{
 Computes Phenotype Risk Scores based on a approach that was proposed in the context of rare Mendelian phenotypes.

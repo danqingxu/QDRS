@@ -2,7 +2,7 @@
 #' @description Computes an estimated rank-one matrix R with unit-norm eigenvector v. Up to a sign ambiguity, the entries of v are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input features.
 #' @param Qmat The correlation matrix Q.
 #' @import MASS
-#' @return Rmat An estimate of the rank-one R matrix
+#' @return \code{Rmat} An estimate of the rank-one R matrix
 rankOne.R <- function(Qmat) {
   L <- dim(Qmat)[1]
   N <- L*(L-1)/2
@@ -36,8 +36,9 @@ rankOne.R <- function(Qmat) {
 #' @description Compute Eigen weights and scores. This method is unsupervised, and assigns weights that are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input feature.
 #' @param X The original data set that include training and test sets. It should be a matrix of numbers.
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.
-#' @return weights The Eigen weights for input features.
-#' @return scores The resulting Eigen scores for the whole set.
+#' @return It returns a list of following components:
+#' \item{weights}{The Eigen weights for input features.}
+#' \item{scores}{The resulting Eigen scores for the whole set.}
 #' @examples
 #' \dontrun{
 #' data(EHR)

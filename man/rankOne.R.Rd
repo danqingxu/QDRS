@@ -10,7 +10,7 @@ rankOne.R(Qmat)
 \item{Qmat}{The correlation matrix Q.}
 }
 \value{
-Rmat An estimate of the rank-one R matrix
+\code{Rmat} An estimate of the rank-one R matrix
 }
 \description{
 Computes an estimated rank-one matrix R with unit-norm eigenvector v. Up to a sign ambiguity, the entries of v are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input features.

@@ -5,8 +5,9 @@
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.
 #' @param pc.num The vector of desired individual PCs.
 #' @export
-#' @return weights The selected PC weights for input features.
-#' @return scores The resulting PC scores for the whole set.
+#' @return It returns a list of following components:
+#' \item{weights}{The selected individual PCs' weights for input features.}
+#' \item{scores}{The resulting individual PC scores for the whole set.}
 #' @examples
 #' \dontrun{
 #' data(EHR)

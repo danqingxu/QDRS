@@ -16,9 +16,9 @@ PC(X, group, training, pc.num)
 \item{pc.num}{The vector of desired individual PCs.}
 }
 \value{
-weights The selected PC weights for input features.
-
-scores The resulting PC scores for the whole set.
+It returns a list of following components:
+\item{weights}{The selected individual PCs' weights for input features.}
+\item{scores}{The resulting individual PC scores for the whole set.}
 }
 \description{
 Computes individual PC weights and scores. The approach only requires weak labels to help select the signs of individual PCs.

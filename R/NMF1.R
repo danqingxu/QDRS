@@ -3,7 +3,9 @@
 #' @param X The original data set. It should be a matrix of numbers.
 #' @param p.seed A random seed for model fitting.
 #' @export
-#' @return lvs The resulting LVSs for the new set Y.
+#' @return It returns a list of following components:
+#' \item{weights}{The NMF1 weights for input features.}
+#' \item{scores}{The resulting NMF1 scores for the whole set.}
 #' @examples
 #' \dontrun{
 #' data(EHR)

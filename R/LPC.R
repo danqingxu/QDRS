@@ -5,10 +5,11 @@
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.
 #' @export
 #' @import AssocTests
-#' @return lpc.n The number of significant PCs (eigenvalues) suggested by Tracy-Widom test, a vector of the sign of individual PC.
-#' @return pc.sign A vector of the sign of individual PC.
-#' @return weights The LPC weights for input features.
-#' @return scores The resulting LPC scores for the whole set.
+#' @return It returns a list of following components:
+#' \item{lpc.n}{The number of significant PCs (eigenvalues) suggested by Tracy-Widom test, a vector of the sign of individual PC.}
+#' \item{pc.sign}{A vector of the sign of individual PC.}
+#' \item{weights}{The LPC weights for input features.}
+#' \item{scores}{The resulting LPC scores for the whole set.}
 #' @examples
 #' \dontrun{
 #' data(EHR)
