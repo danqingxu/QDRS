@@ -17,7 +17,7 @@ pairwise.auc(x, g, format = "l")
 A data frame with group 1, group 2, and the AUROC with comparison between them.
 }
 \description{
-\code{pairwise.auc} calculates AUROC for pairwise levels of group contrast .
+Calculates AUROC for pairwise levels of group contrast .
 }
 \examples{
 \dontrun{

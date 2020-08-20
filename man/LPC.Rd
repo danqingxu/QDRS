@@ -2,12 +2,12 @@
 % Please edit documentation in R/LPC.R
 \name{LPC}
 \alias{LPC}
-\title{Compute LPC (a Linear combination of Principal Components) weights and scores.}
+\title{Linear Combination of Principal Components}
 \usage{
 LPC(X, group, training)
 }
 \arguments{
-\item{X}{The whole original data set that include training and test sets. It should be a matrix of numbers.}
+\item{X}{The original data set that include training and test sets. It should be a matrix of numbers.}
 
 \item{group}{A vector that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed, and means that the observation is not used in individual PC sign determination.}
 
@@ -23,7 +23,7 @@ weights The LPC weights for input features.
 scores The resulting LPC scores for the whole set.
 }
 \description{
-\code{LPC} can compute LPC scores based on an almost unsupervised method that combines multiple PCs and only requires weak labels to help select the signs of individual PCs.
+Computes LPC weights and scores based on an almost unsupervised method that combines multiple PCs and only requires weak labels to help select the signs of individual PCs.
 }
 \examples{
 \dontrun{

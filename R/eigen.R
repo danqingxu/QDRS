@@ -1,5 +1,5 @@
-#' @title R Matrix with Rank One for Eigen Approach.
-#' @description \code{rankOne.R} can compute an estimated rank-one matrix R with unit-norm eigenvector v. Up to a sign ambiguity, the entries of v are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input features.
+#' @title R Matrix with Rank One for Eigen Approach
+#' @description Computes an estimated rank-one matrix R with unit-norm eigenvector v. Up to a sign ambiguity, the entries of v are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input features.
 #' @param Qmat The correlation matrix Q.
 #' @import MASS
 #' @return Rmat An estimate of the rank-one R matrix
@@ -32,8 +32,8 @@ rankOne.R <- function(Qmat) {
 }
 
 
-#' @title Eigen scores.
-#' @description Compute Eigen scores. This method is unsupervised, and assigns weights that are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input feature.
+#' @title Eigen Scores
+#' @description Compute Eigen weights and scores. This method is unsupervised, and assigns weights that are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input feature.
 #' @param X The original data set that include training and test sets. It should be a matrix of numbers.
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.
 #' @return weights The Eigen weights for input features.
@@ -45,6 +45,9 @@ rankOne.R <- function(Qmat) {
 #' }
 #' @references Iuliana Ionita-Laza, Kenneth McCallum, Bin Xu, and Joseph D Buxbaum. A spectral approach integrating functional genomic annotations for coding and noncoding variants. Nature genetics, 48(2):214, 2016.
 eigen.score <- function(X, training){
+  X = as.matrix(X)
+  if(mode(X)=="character") { stop("The original data set must be numeric.") }
+
   Xmat <- scale(X)
   X.train <- Xmat[training,]
   cov1 <- cor(X.train,use="pairwise.complete.obs")

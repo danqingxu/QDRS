@@ -1,7 +1,7 @@
-#' @title Compute individual PCs (Principal Components) weights and scores with selected signs.
-#' @description \code{PC} can compute individual PC scores and only requires weak labels to help select the signs of individual PCs.
-#' @param X The whole original data set that include training and test sets. It should be a matrix of numbers.
-#' @param group A vector that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed, and means that the observation is not used in individual PC sign determination.
+#' @title Individual Principal Components with Selected Signs
+#' @description Computes individual PC weights and scores. The approach only requires weak labels to help select the signs of individual PCs.
+#' @param X The original data set that include training and test sets. It should be a matrix of numbers.
+#' @param group A grouping vector or factor that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed, and means that the observation is not used in individual PC sign determination.
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.
 #' @param pc.num The vector of desired individual PCs.
 #' @export

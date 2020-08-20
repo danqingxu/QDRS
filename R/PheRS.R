@@ -1,5 +1,5 @@
-#' Compute Phenotype Risk Scores (PheRSs).
-#' @description \code{PheRS} computes Phenotype Risk Scores based on a approach that was proposed in the context of rare Mendelian phenotypes.
+#' Phenotype Risk Scores (PheRSs)
+#' @description Computes Phenotype Risk Scores based on a approach that was proposed in the context of rare Mendelian phenotypes.
 #' @param X The original data set that include training and test sets. It should be a matrix of binary numbers.
 #' @param feature.prevalence A vector of feature prevalence.
 #' @param group A vector that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed. The default is NULL, meaning all observations will be used in prevalence computation if the feature prevalence vector is not provided by the user. Otherwise, only the controls will be used.

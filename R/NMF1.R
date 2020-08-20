@@ -1,5 +1,5 @@
-#' @title Compute Non-negative Matrix Factorization with Rank 1 Scores (NMF1s).
-#' @description \code{NMF1} can compute NMF1 scores with factor loadings constrained to be non-negative.
+#' @title Non-negative Matrix Factorization with Rank 1 Scores
+#' @description Computes NMF1 scores with factor loadings constrained to be non-negative.
 #' @param X The original data set. It should be a matrix of numbers.
 #' @param p.seed A random seed for model fitting.
 #' @export
@@ -11,6 +11,9 @@
 #' res1 <- NMF1(X = sample.set[seq(1,50),])
 #' }
 NMF1 <- function(X, p.seed = 123){
+  X = as.matrix(X)
+  if(mode(X)=="character") { stop("The original data set must be numeric.") }
+
   rSums = rowSums(X)
   cSums = colSums(X)
   zero.rowind = which(rSums==0)

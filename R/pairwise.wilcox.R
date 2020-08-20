@@ -1,5 +1,5 @@
 #' @title Pairwise Wilcoxon Rank Sum Tests
-#' @description \code{pairwise.wilcox} calculates pairwise comparisons between group levels with corrections for multiple testing.
+#' @description Calculates pairwise comparisons between group levels with corrections for multiple testing.
 #' @param x A response vector.
 #' @param g A grouping vector or factor.
 #' @param p.adjust.method Method for adjusting p values (can be abbreviated): "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none". The default is "bonferroni".

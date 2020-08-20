@@ -1,5 +1,5 @@
 #' @title Pairwise Area Under the PR Curve
-#' @description \code{pairwise.upr} calculates AUPRC for pairwise levels of group contrast .
+#' @description Calculates AUPRC for pairwise group levels contrast.
 #' @param x A response vector.
 #' @param g A grouping vector or factor.
 #' @param format Format of result. The default is "l", long format. The other option is square format.

@@ -1,5 +1,5 @@
 #' @title Pairwise Area Under the ROC Curve
-#' @description \code{pairwise.auc} calculates AUROC for pairwise levels of group contrast .
+#' @description Calculates AUROC for pairwise levels of group contrast .
 #' @param x A response vector.
 #' @param g A grouping vector or factor.
 #' @param format Format of result. The default is "l", long format. The other option is square format.

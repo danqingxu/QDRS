@@ -2,14 +2,14 @@
 % Please edit documentation in R/PC.R
 \name{PC}
 \alias{PC}
-\title{Compute individual PCs (Principal Components) weights and scores with selected signs.}
+\title{Individual Principal Components with Selected Signs}
 \usage{
 PC(X, group, training, pc.num)
 }
 \arguments{
-\item{X}{The whole original data set that include training and test sets. It should be a matrix of numbers.}
+\item{X}{The original data set that include training and test sets. It should be a matrix of numbers.}
 
-\item{group}{A vector that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed, and means that the observation is not used in individual PC sign determination.}
+\item{group}{A grouping vector or factor that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed, and means that the observation is not used in individual PC sign determination.}
 
 \item{training}{A logical or index vector to indicate whether the subject belongs to the training set.}
 
@@ -21,7 +21,7 @@ weights The selected PC weights for input features.
 scores The resulting PC scores for the whole set.
 }
 \description{
-\code{PC} can compute individual PC scores and only requires weak labels to help select the signs of individual PCs.
+Computes individual PC weights and scores. The approach only requires weak labels to help select the signs of individual PCs.
 }
 \examples{
 \dontrun{

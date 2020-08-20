@@ -17,7 +17,7 @@ pairwise.upr(x, g, format = "l")
 A data frame with group 1, group 2, and the AUPRC with comparison between them.
 }
 \description{
-\code{pairwise.upr} calculates AUPRC for pairwise levels of group contrast .
+Calculates AUPRC for pairwise group levels contrast.
 }
 \examples{
 \dontrun{

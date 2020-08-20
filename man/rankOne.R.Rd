@@ -2,7 +2,7 @@
 % Please edit documentation in R/eigen.R
 \name{rankOne.R}
 \alias{rankOne.R}
-\title{R Matrix with Rank One for Eigen Approach.}
+\title{R Matrix with Rank One for Eigen Approach}
 \usage{
 rankOne.R(Qmat)
 }
@@ -13,5 +13,5 @@ rankOne.R(Qmat)
 Rmat An estimate of the rank-one R matrix
 }
 \description{
-\code{rankOne.R} can compute an estimated rank-one matrix R with unit-norm eigenvector v. Up to a sign ambiguity, the entries of v are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input features.
+Computes an estimated rank-one matrix R with unit-norm eigenvector v. Up to a sign ambiguity, the entries of v are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input features.
 }

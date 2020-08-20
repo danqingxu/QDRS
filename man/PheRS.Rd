@@ -2,7 +2,7 @@
 % Please edit documentation in R/PheRS.R
 \name{PheRS}
 \alias{PheRS}
-\title{Compute Phenotype Risk Scores (PheRSs).}
+\title{Phenotype Risk Scores (PheRSs)}
 \usage{
 PheRS(X, feature.prevalence = NULL, group = NULL)
 }
@@ -19,7 +19,7 @@ weights The PheRS weights for input features.
 scores The resulting PheRSs for the whole set.
 }
 \description{
-\code{PheRS} computes Phenotype Risk Scores based on a approach that was proposed in the context of rare Mendelian phenotypes.
+Computes Phenotype Risk Scores based on a approach that was proposed in the context of rare Mendelian phenotypes.
 }
 \examples{
 \dontrun{

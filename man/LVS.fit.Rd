@@ -2,7 +2,7 @@
 % Please edit documentation in R/LVS.R
 \name{LVS.fit}
 \alias{LVS.fit}
-\title{Fit a Latent Variable Model.}
+\title{Fit a Latent Variable Model}
 \usage{
 LVS.fit(X, starting.choice = "random", p.seed = 3080)
 }

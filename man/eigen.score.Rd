@@ -2,7 +2,7 @@
 % Please edit documentation in R/eigen.R
 \name{eigen.score}
 \alias{eigen.score}
-\title{Eigen scores.}
+\title{Eigen Scores}
 \usage{
 eigen.score(X, training)
 }
@@ -17,7 +17,7 @@ weights The Eigen weights for input features.
 scores The resulting Eigen scores for the whole set.
 }
 \description{
-Compute Eigen scores. This method is unsupervised, and assigns weights that are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input feature.
+Compute Eigen weights and scores. This method is unsupervised, and assigns weights that are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input feature.
 }
 \examples{
 \dontrun{

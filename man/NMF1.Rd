@@ -2,7 +2,7 @@
 % Please edit documentation in R/NMF1.R
 \name{NMF1}
 \alias{NMF1}
-\title{Compute Non-negative Matrix Factorization with Rank 1 Scores (NMF1s).}
+\title{Non-negative Matrix Factorization with Rank 1 Scores}
 \usage{
 NMF1(X, p.seed = 123)
 }
@@ -15,7 +15,7 @@ NMF1(X, p.seed = 123)
 lvs The resulting LVSs for the new set Y.
 }
 \description{
-\code{NMF1} can compute NMF1 scores with factor loadings constrained to be non-negative.
+Computes NMF1 scores with factor loadings constrained to be non-negative.
 }
 \examples{
 \dontrun{

@@ -13,7 +13,8 @@ disease risk scores, with application to Eletronic Health Records.
 Installation
 ------------
 
-You can install the *development* version of QDRS from Github:
+You can install the *development* version of QDRS from
+[Github](https://github.com/danqingxu/QDRS):
 
     # install.packages("devtools")
     devtools::install_github("danqingxu/QDRS")
@@ -31,12 +32,18 @@ Usage
     sample.group = EHR$sample.group
     training = EHR$training
 
+    # Compute QDRSs
     PheRS.res = PheRS(X = sample.set, group = sample.group)
     Eigen.res = eigen.score(X = sample.set, training = training)
     PC.res = PC(X = sample.set, group = sample.group, training = training, pc.num = 1:2)
     LPC.res = LPC(X = sample.set, group = sample.group, training = training)
     LVS.res = LVS.score(X = sample.set)
     NMF1.res = NMF1(X = sample.set)
+
+    # Assess the performance
+    pairwise.wilcox(x = LPC.res$scores, g = sample.group)
+    pairwise.auc(x = LPC.res$scores, g = sample.group)
+    pairwise.upr(x = LPC.res$scores, g = sample.group)
 
 License
 -------

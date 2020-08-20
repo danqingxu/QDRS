@@ -1,6 +1,6 @@
-#' @title Compute LPC (a Linear combination of Principal Components) weights and scores.
-#' @description \code{LPC} can compute LPC scores based on an almost unsupervised method that combines multiple PCs and only requires weak labels to help select the signs of individual PCs.
-#' @param X The whole original data set that include training and test sets. It should be a matrix of numbers.
+#' @title Linear Combination of Principal Components
+#' @description Computes LPC weights and scores based on an almost unsupervised method that combines multiple PCs and only requires weak labels to help select the signs of individual PCs.
+#' @param X The original data set that include training and test sets. It should be a matrix of numbers.
 #' @param group A vector that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed, and means that the observation is not used in individual PC sign determination.
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.
 #' @export
@@ -16,7 +16,6 @@
 #' }
 
 LPC <- function(X,group,training){
-  # checking basic requirements for parameters
   X = as.matrix(X)
   if(mode(X)=="character") { stop("The original data set must be numeric.") }
 

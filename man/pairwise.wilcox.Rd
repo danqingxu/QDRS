@@ -17,7 +17,7 @@ pairwise.wilcox(x, g, p.adjust.method = "bonferroni")
 A data frame with group 1, group 2, and the Wilcoxon Rank Sum test p value of comparison between them.
 }
 \description{
-\code{pairwise.wilcox} calculates pairwise comparisons between group levels with corrections for multiple testing.
+Calculates pairwise comparisons between group levels with corrections for multiple testing.
 }
 \examples{
 \dontrun{
