@@ -1,4 +1,4 @@
-#' Phenotype Risk Scores (PheRSs)
+#' Phenotype Risk Score
 #' @description Computes Phenotype Risk Scores based on a approach that was proposed in the context of rare Mendelian phenotypes.
 #' @param X The original data set that include training and test sets. It should be a matrix of binary numbers.
 #' @param feature.prevalence A vector of feature prevalence.

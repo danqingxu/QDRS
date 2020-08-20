@@ -32,7 +32,7 @@ rankOne.R <- function(Qmat) {
 }
 
 
-#' @title Eigen Scores
+#' @title Eigen Score
 #' @description Compute Eigen weights and scores. This method is unsupervised, and assigns weights that are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input feature.
 #' @param X The original data set that include training and test sets. It should be a matrix of numbers.
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.

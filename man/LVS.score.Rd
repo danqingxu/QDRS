@@ -2,7 +2,7 @@
 % Please edit documentation in R/LVS.R
 \name{LVS.score}
 \alias{LVS.score}
-\title{Latent Variable Scores (LVSs)}
+\title{Latent Variable Score (LVS)}
 \usage{
 LVS.score(X, Y = NULL, starting.choice = "random", p.seed = 3080)
 }

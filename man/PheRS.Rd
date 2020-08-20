@@ -2,7 +2,7 @@
 % Please edit documentation in R/PheRS.R
 \name{PheRS}
 \alias{PheRS}
-\title{Phenotype Risk Scores (PheRSs)}
+\title{Phenotype Risk Score}
 \usage{
 PheRS(X, feature.prevalence = NULL, group = NULL)
 }

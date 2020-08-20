@@ -2,7 +2,7 @@
 % Please edit documentation in R/NMF1.R
 \name{NMF1}
 \alias{NMF1}
-\title{Non-negative Matrix Factorization with Rank 1 Scores}
+\title{Non-negative Matrix Factorization with Rank 1 Score}
 \usage{
 NMF1(X, p.seed = 123)
 }

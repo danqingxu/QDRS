@@ -2,7 +2,7 @@
 % Please edit documentation in R/eigen.R
 \name{eigen.score}
 \alias{eigen.score}
-\title{Eigen Scores}
+\title{Eigen Score}
 \usage{
 eigen.score(X, training)
 }

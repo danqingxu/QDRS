@@ -1,4 +1,4 @@
-#' @title Non-negative Matrix Factorization with Rank 1 Scores
+#' @title Non-negative Matrix Factorization with Rank 1 Score
 #' @description Computes NMF1 scores with factor loadings constrained to be non-negative.
 #' @param X The original data set. It should be a matrix of numbers.
 #' @param p.seed A random seed for model fitting.

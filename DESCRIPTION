@@ -1,11 +1,11 @@
 Package: QDRS
 Type: Package
-Title: Quantitative Disease Risk Scores
+Title: Quantitative Disease Risk Score
 Version: 0.1.0
 Author: Danqing Xu
 Maintainer: Danqing Xu <xud@pstat.ucsb.edu>
-Description: Functions for computing quantitative disease risk scores: 
-    (1) Phenotype Risk Score (PheRS), (2) a spectral approach (Eigen), (3) principal component approaches (PCA) that include individual PC and a linear combination of multiple PCs (LPC), (4) an unsupervised multivariate mixed model framework (LVS).
+Description: Functions for calculating quantitative disease risk scores: 
+    (1) Phenotype Risk Score (PheRS), (2) a spectral approach (Eigen), (3) principal component approaches (PCA) that include individual PCs and a linear combination of multiple PCs (LPC), (4), Non-negative Matrix Factorization with Rank 1 (NMF1), and (5) Latent Variable Score based on an unsupervised multivariate mixed model framework (LVS).
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
