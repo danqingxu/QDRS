@@ -11,7 +11,9 @@
 #' @examples
 #' \dontrun{
 #' data(EHR)
-#' res1 <- PC(X = EHR$sample.set, group = EHR$sample.group, training = EHR$training, pc.num = 1:2)
+#' res1 <- PC(X = EHR$sample.set,
+#'   group = EHR$sample.group,
+#'   training = EHR$training, pc.num = 1:2)
 #' }
 
 PC <- function(X, group, training, pc.num){

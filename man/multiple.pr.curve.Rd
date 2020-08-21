@@ -40,6 +40,11 @@ Generate a pdf file with multiple plots for several group level contrast. Each p
 }
 \examples{
 \dontrun{
-multiple.pr.curve(disease = "Disease", score.mat = example.scores$score.mat, score.names = example.scores$score.names, group = example.scores$group, group.levels = example.scores$group.levels, legend.pos = "topright", pairs.sub = 1:5)
+multiple.pr.curve(disease = "Disease",
+  score.mat = example.scores$score.mat,
+  score.names = example.scores$score.names,
+  group = example.scores$group,
+  group.levels = example.scores$group.levels,
+  legend.pos = "topright", pairs.sub = 1:5)
 }
 }

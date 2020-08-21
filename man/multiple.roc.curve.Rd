@@ -40,6 +40,11 @@ Generate a pdf file with multiple plots for several group level contrast. Each p
 }
 \examples{
 \dontrun{
-multiple.roc.curve(disease = "Disease", score.mat = example.scores$score.mat, score.names = example.scores$score.names, group = example.scores$group, group.levels = example.scores$group.levels, legend.pos = "bottomright", pairs.sub = 1:5)
+multiple.roc.curve(disease = "Disease",
+  score.mat = example.scores$score.mat,
+  score.names = example.scores$score.names,
+  group = example.scores$group,
+  group.levels = example.scores$group.levels,
+  legend.pos = "bottomright", pairs.sub = 1:5)
 }
 }

@@ -13,7 +13,12 @@
 #' @return It produces a pdf file of plots.
 #' @examples
 #' \dontrun{
-#' multiple.roc.curve(disease = "Disease", score.mat = example.scores$score.mat, score.names = example.scores$score.names, group = example.scores$group, group.levels = example.scores$group.levels, legend.pos = "bottomright", pairs.sub = 1:5)
+#' multiple.roc.curve(disease = "Disease",
+#'   score.mat = example.scores$score.mat,
+#'   score.names = example.scores$score.names,
+#'   group = example.scores$group,
+#'   group.levels = example.scores$group.levels,
+#'   legend.pos = "bottomright", pairs.sub = 1:5)
 #' }
 
 multiple.roc.curve <- function(disease, output.date = NULL, score.mat, score.names, group, group.levels, legend.pos = "bottomright", pairs.sub = NULL){
@@ -110,7 +115,12 @@ multiple.roc.curve <- function(disease, output.date = NULL, score.mat, score.nam
 #' @return It produces a pdf file of plots.
 #' @examples
 #' \dontrun{
-#' multiple.pr.curve(disease = "Disease", score.mat = example.scores$score.mat, score.names = example.scores$score.names, group = example.scores$group, group.levels = example.scores$group.levels, legend.pos = "topright", pairs.sub = 1:5)
+#' multiple.pr.curve(disease = "Disease",
+#'   score.mat = example.scores$score.mat,
+#'   score.names = example.scores$score.names,
+#'   group = example.scores$group,
+#'   group.levels = example.scores$group.levels,
+#'   legend.pos = "topright", pairs.sub = 1:5)
 #' }
 
 multiple.pr.curve <- function(disease, output.date = NULL, score.mat, score.names, group, group.levels, legend.pos = "topright", pairs.sub = NULL){
