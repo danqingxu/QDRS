@@ -25,7 +25,7 @@ LVS.fit <- function(X,starting.choice="random",p.seed=3080) {
 #' }
 #' @references Jenni Niku, Wesley Brooks, Riki Herliansyah, Francis KC Hui, Sara Taskinen, and David I Warton. Efficient estimation of generalized linear latent variable models. PloS one, 14(5), 2019.
 
-LVS.score <- function(X, Y=NULL, starting.choice="random", p.seed=3080) {
+LVS.score <- function(X, Y = NULL, starting.choice= "random", p.seed = 3080) {
   fit.VA <- LVS.fit(X, starting.choice = starting.choice, p.seed = p.seed)
   if (is.null(Y)) {Y = X}
   pred <- predictLVs.gllvm(fit.VA, newY = Y)
