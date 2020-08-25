@@ -50,7 +50,7 @@ eigen.score <- function(X, training, scale = TRUE){
   X = as.matrix(X)
   if(mode(X)=="character") { stop("The original data set must be numeric.") }
 
-  Xmat <- scale(X)
+  Xmat = ifelse(scale, scale(X), X)
   X.train <- Xmat[training,]
   cov1 <- cor(X.train,use="pairwise.complete.obs")
   Rmat <- rankOne.R(cov1)
