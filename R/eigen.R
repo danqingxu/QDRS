@@ -23,8 +23,6 @@ rankOne.R <- function(Qmat) {
   # Least squares solution
   A.inv <- ginv(A)
   t.vec <-  A.inv %*% q.vec
-  # lm1 = lm(q.vec~A+0)
-  # t.vec = as.vector(lm1$coefficients)
 
   # Calculate Rmat
   Rmat <- exp(t.vec) %*% t(exp(t.vec))
@@ -50,7 +48,12 @@ eigen.score <- function(X, training, scale = TRUE){
   X = as.matrix(X)
   if(mode(X)=="character") { stop("The original data set must be numeric.") }
 
-  Xmat = ifelse(scale, scale(X), X)
+  if (scale) {
+    Xmat = scale(X)
+  } else {
+    Xmat = X
+  }
+
   X.train <- Xmat[training,]
   cov1 <- cor(X.train,use="pairwise.complete.obs")
   Rmat <- rankOne.R(cov1)

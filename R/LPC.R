@@ -21,8 +21,12 @@ LPC <- function(X, group, training, scale = TRUE){
   X = as.matrix(X)
   if(mode(X)=="character") { stop("The original data set must be numeric.") }
 
-  whole.mat = ifelse(scale, scale(X), X)
-  training.mat = whole.mat[training,]
+  if (scale) {
+    Xmat = scale(X)
+  } else {
+    Xmat = X
+  }
+  training.mat = Xmat[training,]
   training.group = group[training]
   cov1 = cor(training.mat, use="pairwise.complete.obs")
   eigen.res1 = eigen(cov1)
@@ -52,7 +56,7 @@ LPC <- function(X, group, training, scale = TRUE){
   #LPC.training = as.matrix(pc.sub)%*%matrix(wt,nc=1)
   u.sub = uM[,pc.num,drop=F]
   wts = u.sub%*%matrix(wt,nc=1)
-  LPC = whole.mat%*%as.matrix(wts)
+  LPC = Xmat%*%as.matrix(wts)
   res = list(lpc.n = lpc.n, pc.sign = pc.sign, weights = wts, scores = LPC)
   return(res)
 }

@@ -21,8 +21,12 @@ PC <- function(X, group, training, scale = TRUE, pc.num){
   X = as.matrix(X)
   if(mode(X)=="character") { stop("The original data set must be numeric.") }
 
-  whole.mat = ifelse(scale, scale(X), X)
-  training.mat = whole.mat[training,]
+  if (scale) {
+    Xmat = scale(X)
+  } else {
+    Xmat = X
+  }
+  training.mat = Xmat[training,]
   training.group = group[training]
   cov1 = cor(training.mat, use="pairwise.complete.obs")
   eigen.res = eigen(cov1)
@@ -44,7 +48,7 @@ PC <- function(X, group, training, scale = TRUE, pc.num){
   }
   pc.num = 1:lpc.n
   u.sub = uM[,pc.num,drop=F]
-  PC = as.matrix(whole.mat)%*%u.sub
+  PC = as.matrix(Xmat)%*%u.sub
   scores = data.frame(PC)
   colnames(scores) <- paste0("pc",1:(dim(scores)[2]))
   return(list(weights=u.sub, scores=scores))
