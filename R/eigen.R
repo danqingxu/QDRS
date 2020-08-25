@@ -36,6 +36,7 @@ rankOne.R <- function(Qmat) {
 #' @description Compute Eigen weights and scores. This method is unsupervised, and assigns weights that are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input feature.
 #' @param X The original data set that include training and test sets. It should be a matrix of numbers.
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.
+#' @param scale A logical value to indicate whether the input features need to be scaled.
 #' @return It returns a list of following components:
 #' \item{weights}{The Eigen weights for input features.}
 #' \item{scores}{The resulting Eigen scores for the whole set.}
@@ -45,7 +46,7 @@ rankOne.R <- function(Qmat) {
 #' res1 <- eigen.score(EHR$sample.set, EHR$training)
 #' }
 #' @references Iuliana Ionita-Laza, Kenneth McCallum, Bin Xu, and Joseph D Buxbaum. A spectral approach integrating functional genomic annotations for coding and noncoding variants. Nature genetics, 48(2):214, 2016.
-eigen.score <- function(X, training){
+eigen.score <- function(X, training, scale = TRUE){
   X = as.matrix(X)
   if(mode(X)=="character") { stop("The original data set must be numeric.") }
 

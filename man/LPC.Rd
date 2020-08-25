@@ -4,7 +4,7 @@
 \alias{LPC}
 \title{Linear Combination of Principal Components}
 \usage{
-LPC(X, group, training)
+LPC(X, group, training, scale = TRUE)
 }
 \arguments{
 \item{X}{The original data set that include training and test sets. It should be a matrix of numbers.}
@@ -12,6 +12,8 @@ LPC(X, group, training)
 \item{group}{A vector that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed, and means that the observation is not used in individual PC sign determination.}
 
 \item{training}{A logical or index vector to indicate whether the subject belongs to the training set.}
+
+\item{scale}{A logical value to indicate whether the input features need to be scaled.}
 }
 \value{
 It returns a list of following components:

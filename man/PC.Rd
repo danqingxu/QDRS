@@ -4,7 +4,7 @@
 \alias{PC}
 \title{Individual Principal Components with Selected Signs}
 \usage{
-PC(X, group, training, pc.num)
+PC(X, group, training, scale = TRUE, pc.num)
 }
 \arguments{
 \item{X}{The original data set that include training and test sets. It should be a matrix of numbers.}
@@ -12,6 +12,8 @@ PC(X, group, training, pc.num)
 \item{group}{A grouping vector or factor that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed, and means that the observation is not used in individual PC sign determination.}
 
 \item{training}{A logical or index vector to indicate whether the subject belongs to the training set.}
+
+\item{scale}{A logical value to indicate whether the input features need to be scaled.}
 
 \item{pc.num}{The vector of desired individual PCs.}
 }

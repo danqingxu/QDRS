@@ -3,6 +3,7 @@
 #' @param X The original data set that include training and test sets. It should be a matrix of numbers.
 #' @param group A grouping vector or factor that indicate cases ("Case") and controls ("Control"). \code{NA} is allowed, and means that the observation is not used in individual PC sign determination.
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.
+#' @param scale A logical value to indicate whether the input features need to be scaled.
 #' @param pc.num The vector of desired individual PCs.
 #' @export
 #' @return It returns a list of following components:
@@ -16,11 +17,11 @@
 #'   training = EHR$training, pc.num = 1:2)
 #' }
 
-PC <- function(X, group, training, pc.num){
+PC <- function(X, group, training, scale = TRUE, pc.num){
   X = as.matrix(X)
   if(mode(X)=="character") { stop("The original data set must be numeric.") }
 
-  whole.mat = scale(X)
+  whole.mat = ifelse(scale, scale(X), X)
   training.mat = whole.mat[training,]
   training.group = group[training]
   cov1 = cor(training.mat, use="pairwise.complete.obs")

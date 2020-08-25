@@ -4,12 +4,14 @@
 \alias{eigen.score}
 \title{Eigen Score}
 \usage{
-eigen.score(X, training)
+eigen.score(X, training, scale = TRUE)
 }
 \arguments{
 \item{X}{The original data set that include training and test sets. It should be a matrix of numbers.}
 
 \item{training}{A logical or index vector to indicate whether the subject belongs to the training set.}
+
+\item{scale}{A logical value to indicate whether the input features need to be scaled.}
 }
 \value{
 It returns a list of following components:
