@@ -1,5 +1,5 @@
 #' @title Multiple ROC curves
-#' @description Generate a pdf file with multiple plots for several group level contrast. Each plot consists of ROC curves for different quantitative disease scores, and the corrsponding AUROCs for performance comparison.
+#' @description Generate a pdf file with multiple plots for several group level contrast. Each plot consists of ROC curves for different quantitative disease scores, and the corresponding AUROCs for performance comparison.
 #' @param disease A string of disease name.
 #' @param output.date An output date. The default is system date (today).
 #' @param score.mat A resulting score matrix with multiple types of scores.
@@ -101,7 +101,7 @@ multiple.roc.curve <- function(disease, output.date = NULL, score.mat, score.nam
 }
 
 #' @title Multiple PR curves
-#' @description Generate a pdf file with multiple plots for several group level contrast. Each plot consists of PR curves for different quantitative disease scores, and the corrsponding AUPRs for performance comparison.
+#' @description Generate a pdf file with multiple plots for several group level contrast. Each plot consists of PR curves for different quantitative disease scores, and the corresponding AUPRs for performance comparison.
 #' @param disease A string of disease name.
 #' @param output.date An output date. The default is system date (today).
 #' @param score.mat A resulting score matrix with multiple types of scores.

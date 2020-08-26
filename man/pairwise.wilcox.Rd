@@ -4,12 +4,19 @@
 \alias{pairwise.wilcox}
 \title{Pairwise Wilcoxon Rank Sum Tests}
 \usage{
-pairwise.wilcox(x, g, p.adjust.method = "bonferroni")
+pairwise.wilcox(
+  x,
+  g,
+  alternative = "two.sided",
+  p.adjust.method = "bonferroni"
+)
 }
 \arguments{
 \item{x}{A response vector.}
 
 \item{g}{A grouping vector or factor.}
+
+\item{alternative}{A character string specifying the alternative hypothesis, must be one of "two.sided" (default), "greater" or "less". You can specify just the initial letter.}
 
 \item{p.adjust.method}{Method for adjusting p values (can be abbreviated): "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none". The default is "bonferroni".}
 }

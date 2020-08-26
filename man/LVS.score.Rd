@@ -13,9 +13,9 @@ LVS.score(
 )
 }
 \arguments{
-\item{X}{A training data set. It should be a matrix of binary numbers.}
+\item{X}{A training data set. It should be a matrix of numbers.}
 
-\item{Y}{A new data set. It should be a matrix of binary numbers. Default is NULL, then X will be used in prediction.}
+\item{Y}{A new data set. It should be a matrix of numbers. Default is NULL, then X will be used in prediction.}
 
 \item{family}{distribution function for responses. Options are poisson(link = "log"), "negative.binomial" (with log link), binomial(link = "probit") , zero inflated poisson ("ZIP"), gaussian(link = "identity"), "gamma" (with log link), and "ordinal".}
 

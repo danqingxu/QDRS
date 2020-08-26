@@ -36,7 +36,7 @@ multiple.roc.curve(
 It produces a pdf file of plots.
 }
 \description{
-Generate a pdf file with multiple plots for several group level contrast. Each plot consists of ROC curves for different quantitative disease scores, and the corrsponding AUROCs for performance comparison.
+Generate a pdf file with multiple plots for several group level contrast. Each plot consists of ROC curves for different quantitative disease scores, and the corresponding AUROCs for performance comparison.
 }
 \examples{
 \dontrun{

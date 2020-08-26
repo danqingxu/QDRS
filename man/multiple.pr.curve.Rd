@@ -36,7 +36,7 @@ multiple.pr.curve(
 It produces a pdf file of plots.
 }
 \description{
-Generate a pdf file with multiple plots for several group level contrast. Each plot consists of PR curves for different quantitative disease scores, and the corrsponding AUPRs for performance comparison.
+Generate a pdf file with multiple plots for several group level contrast. Each plot consists of PR curves for different quantitative disease scores, and the corresponding AUPRs for performance comparison.
 }
 \examples{
 \dontrun{
