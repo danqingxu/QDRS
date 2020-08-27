@@ -1,6 +1,7 @@
 #' @title R Matrix with Rank One for Eigen Approach
 #' @description Computes an estimated rank-one matrix R with unit-norm eigenvector v. Up to a sign ambiguity, the entries of v are proportional to the balanced accuracies (the average between the sensitivity and the specificity) of the input features.
 #' @param Qmat The correlation matrix Q.
+#' @export
 #' @import MASS
 #' @return \code{Rmat} An estimate of the rank-one R matrix
 rankOne.R <- function(Qmat) {
@@ -35,6 +36,8 @@ rankOne.R <- function(Qmat) {
 #' @param X The original data set that include training and test sets. It should be a matrix of numbers.
 #' @param training A logical or index vector to indicate whether the subject belongs to the training set.
 #' @param scale A logical value to indicate whether the input features need to be scaled.
+#' @import MASS
+#' @export
 #' @return It returns a list of following components:
 #' \item{weights}{The Eigen weights for input features.}
 #' \item{scores}{The resulting Eigen scores for the whole set.}

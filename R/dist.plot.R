@@ -125,6 +125,6 @@ dist.plot <- function(disease, output.date = NULL, score.mat, score.name, group,
  }
   figure <- annotate_figure(figure,
                  top = text_grob(grand.title, color = "#0033A0", face = "bold"))
- ggexport(figure, filename = paste0(score.name, "_", disease,"_distribution_plots_",output.date,".pdf"), height = 8/3, width = 8)
+ ggexport(figure, filename = paste0(score.name, "_", disease,"_distribution_plots_",output.date,"_unknown",unknown,".pdf"), height = 8/3, width = 8)
  return(list(density = density_plot, box = box_plot, prev = prevalence_plot))
 }

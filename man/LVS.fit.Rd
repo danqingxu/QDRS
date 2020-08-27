@@ -19,5 +19,5 @@ LVS.fit(X, familiy, starting.choice = "random", p.seed = 3080)
 An object of class "gllvm" includes the following components.
 }
 \description{
-\code{LVS.fit} computes a generalized lineatr latent variable model for multivariate bernoulli data, which assumes one latent variable.
+\code{LVS.fit} computes a generalized lineatr latent variable model for multivariate data, which assumes one latent variable.
 }
