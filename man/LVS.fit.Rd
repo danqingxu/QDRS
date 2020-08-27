@@ -13,7 +13,7 @@ LVS.fit(X, familiy, starting.choice = "random", p.seed = 3080)
 
 \item{p.seed}{A random seed for model fitting.}
 
-\item{family}{distribution function for responses. Options are poisson(link = "log"), "negative.binomial" (with log link), binomial(link = "probit") , zero inflated poisson ("ZIP"), gaussian(link = "identity"), "gamma" (with log link), and "ordinal".}
+\item{family}{distribution function for responses. Options are poisson(link = "log"), "negative.binomial" (with log link), binomial(link = "probit"), gaussian(link = "identity"), "gamma" (with log link), and "ordinal".}
 }
 \value{
 An object of class "gllvm" includes the following components.
