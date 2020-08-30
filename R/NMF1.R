@@ -2,7 +2,7 @@
 #' @description Computes NMF1 scores with factor loadings constrained to be non-negative.
 #' @param X The original data set. It should be a matrix of numbers.
 #' @param p.seed A random seed for model fitting.
-#' @import NMF
+#' @importFrom NMF nmf
 #' @export
 #' @return It returns a list of following components:
 #' \item{weights}{The NMF1 weights for input features.}
@@ -23,7 +23,7 @@ NMF1 <- function(X, p.seed = 123){
   zero.colind = which(cSums==0)
   message("Removing ", paste0(length(zero.rowind)," rows and ", length(zero.colind)," columns that have all zeros."))
   X.clean = X[-zero.rowind,-zero.colind]
-  nmf1.out = nmf(X.clean, 1, seed = p.seed)
+  nmf1.out = NMF::nmf(X.clean, 1, seed = p.seed)
   scores = rep(0,nrow(X))
   scores[which(rSums!=0)] = as.numeric(nmf1.out@fit@W)
   weights = as.numeric(nmf1.out@fit@H)
