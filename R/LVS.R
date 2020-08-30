@@ -9,8 +9,10 @@
 #' @return An object of class "gllvm" includes the following components.
 LVS.fit <- function(X, family = "binomial", starting.choice = "random", p.seed = 3080) {
   rowsum_u = rowSums(X)
+  colsum_u = colSums(X)
   Xc = X[rowsum_u!=0,]
   if (family == "binomial"){
+    if (sum(colsum_u==0)>0) {stop("There is at least one column with zeros.")}
     fit.VA <- gllvm(Xc, family = "binomial"("probit"), method = "VA", num.lv = 1, starting.val = starting.choice, seed = p.seed)
   } else {
     fit.VA <- gllvm(Xc, family = family, method = "VA", num.lv = 1, starting.val = starting.choice, seed = p.seed)

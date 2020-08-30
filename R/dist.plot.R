@@ -9,6 +9,7 @@
 #' @param unknown.show A logical value indicates whethe unknowns should be used for plotting.
 #' @export
 #' @import PRROC
+#' @import ggplot2
 #' @import ggpubr
 #' @return It produces a pdf file of plots and returns the list of three distribution plots.
 #' @examples
@@ -16,7 +17,7 @@
 #' group1 = example.scores$group
 #' group1[group1 != "Control"] = "Case"
 #' set.seed(830)
-#' na.ind = sample(1:length(group), size = 1000)
+#' na.ind = sample(1:length(group1), size = 1000)
 #' group1[na.ind] = NA
 #' res = dist.plot(disease = "Disease",
 #'   score.mat = example.scores$score.mat,

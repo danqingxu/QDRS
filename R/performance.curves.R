@@ -10,6 +10,7 @@
 #' @param pairs.sub An index vector for subset of group level pairs, e.g. the pairs contrasting control vs. other case stages.
 #' @export
 #' @import PRROC
+#' @import ggplot2
 #' @import ggpubr
 #' @return It produces a pdf file of plots.
 #' @examples
@@ -113,6 +114,7 @@ multiple.roc.curve <- function(disease, output.date = NULL, score.mat, score.nam
 #' @param pairs.sub An index vector for subset of group level pairs, e.g. the pairs contrasting control vs. other case stages.
 #' @export
 #' @import PRROC
+#' @import ggplot2
 #' @import ggpubr
 #' @return It produces a pdf file of plots.
 #' @examples

@@ -40,7 +40,7 @@ Generate a pdf file with a density plot, a boxplot and a prevalence plot for the
 group1 = example.scores$group
 group1[group1 != "Control"] = "Case"
 set.seed(830)
-na.ind = sample(1:length(group), size = 1000)
+na.ind = sample(1:length(group1), size = 1000)
 group1[na.ind] = NA
 res = dist.plot(disease = "Disease",
   score.mat = example.scores$score.mat,
