@@ -9,6 +9,7 @@
 #' @param unknown.show A logical value indicates whethe unknowns should be used for plotting.
 #' @export
 #' @import PRROC
+#' @import ggpubr
 #' @return It produces a pdf file of plots and returns the list of three distribution plots.
 #' @examples
 #' \dontrun{

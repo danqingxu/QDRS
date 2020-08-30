@@ -2,6 +2,7 @@
 #' @description Computes NMF1 scores with factor loadings constrained to be non-negative.
 #' @param X The original data set. It should be a matrix of numbers.
 #' @param p.seed A random seed for model fitting.
+#' @import NMF
 #' @export
 #' @return It returns a list of following components:
 #' \item{weights}{The NMF1 weights for input features.}
