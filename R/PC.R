@@ -50,6 +50,6 @@ PC <- function(X, group, training, scale = TRUE, pc.num){
   u.sub = uM[,pc.num,drop=F]
   PC = as.matrix(Xmat)%*%u.sub
   scores = data.frame(PC)
-  colnames(scores) <- paste0("pc",1:(dim(scores)[2]))
+  colnames(scores) <- paste0("PC",1:(dim(scores)[2]))
   return(list(weights=u.sub, scores=scores))
 }

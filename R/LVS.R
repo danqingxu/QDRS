@@ -7,7 +7,7 @@
 #' @import gllvm
 #' @export
 #' @return An object of class "gllvm" includes the following components.
-LVS.fit <- function(X, familiy, starting.choice = "random", p.seed = 3080) {
+LVS.fit <- function(X, family = "binomial", starting.choice = "random", p.seed = 3080) {
   if (familiy == "binomial"){
     fit.VA <- gllvm(X, family = "binomial"("probit"), method = "VA", num.lv = 1, starting.val = starting.choice, seed = p.seed)
   } else {
@@ -56,7 +56,7 @@ predictLVS <- function(Y, model) {
 #' @references Jenni Niku, Wesley Brooks, Riki Herliansyah, Francis KC Hui, Sara Taskinen, and David I Warton. Efficient estimation of generalized linear latent variable models. PloS one, 14(5), 2019.
 
 LVS.score <- function(X, Y = NULL, family = "binomial", starting.choice= "random", p.seed = 3080) {
-  fit.VA <- LVS.fit(X, starting.choice = starting.choice, p.seed = p.seed)
+  fit.VA <- LVS.fit(X, family = family, starting.choice = starting.choice, p.seed = p.seed)
   if (is.null(Y)) {Y = X}
   pred <- predictLVS(Y = Y, model = fit.VA)
   return(pred)
