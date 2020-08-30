@@ -34,10 +34,10 @@ Usage
 
     # Compute QDRSs
     PheRS.res = PheRS(X = sample.set, group = sample.group)
-    Eigen.res = eigen.score(X = sample.set, training = training)
-    PC.res = PC(X = sample.set, group = sample.group, training = training, pc.num = 1:2)
-    LPC.res = LPC(X = sample.set, group = sample.group, training = training)
-    LVS.res = LVS.score(X = sample.set)
+    Eigen.res = eigen.score(X = sample.set, training = training, scale = TRUE)
+    PC.res = PC(X = sample.set, group = sample.group, training = training, scale = TRUE, pc.num = 1:2)
+    LPC.res = LPC(X = sample.set, group = sample.group, training = training, scale = TRUE)
+    LVS.res = LVS.score(X = sample.set, Y = NULL, family = "binomial", starting.choice = "random", p.seed = 124)
     NMF1.res = NMF1(X = sample.set)
 
     # Assess the performance
