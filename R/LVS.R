@@ -8,7 +8,7 @@
 #' @export
 #' @return An object of class "gllvm" includes the following components.
 LVS.fit <- function(X, family = "binomial", starting.choice = "random", p.seed = 3080) {
-  if (familiy == "binomial"){
+  if (family == "binomial"){
     fit.VA <- gllvm(X, family = "binomial"("probit"), method = "VA", num.lv = 1, starting.val = starting.choice, seed = p.seed)
   } else {
     fit.VA <- gllvm(X, family = family, method = "VA", num.lv = 1, starting.val = starting.choice, seed = p.seed)
