@@ -44,6 +44,10 @@ Usage
     pairwise.wilcox(x = LPC.res$scores, g = sample.group)
     pairwise.auc(x = LPC.res$scores, g = sample.group)
     pairwise.upr(x = LPC.res$scores, g = sample.group)
+  
+Documentation of Analyses
+-------
+https://github.com/danqingxu/QDRS_Documentation
 
 License
 -------
